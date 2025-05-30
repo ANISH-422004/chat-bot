@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post('/chat', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, {
         messages: newChat.map(msg => ({
           role: msg.role,
           content: msg.content,

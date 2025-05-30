@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:3000/api/chat', {
+      const res = await axios.post('/chat', {
         messages: newChat.map(msg => ({
           role: msg.role,
           content: msg.content,
